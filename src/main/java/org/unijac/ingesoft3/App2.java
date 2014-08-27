@@ -1,5 +1,7 @@
 package org.unijac.ingesoft3;
 
+import org.unijac.ingesoft3.mvc.CalcController2;
+import org.unijac.ingesoft3.mvc.CalcModel2;
 import org.unijac.ingesoft3.mvc.CalcView2;
 
 /**
@@ -7,7 +9,10 @@ import org.unijac.ingesoft3.mvc.CalcView2;
  */
 public class App2 {
     public static void main(String[] args) {
+        CalcModel2 model = new CalcModel2();
         CalcView2 view = new CalcView2();
+        CalcController2 controller = new CalcController2(model, view);
+
         view.setVisible(true);
     }
 }
