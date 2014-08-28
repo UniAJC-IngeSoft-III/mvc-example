@@ -34,16 +34,36 @@ public class CalcController2 {
                     if(number.equals("0"))
                         number = "";
                     number += key;
+                    model.setValue(number);
                 }
             }else{
                 switch (key){
                     case "C":
+                        model.reset();
+                        number = "0";
+                        break;
+                    case "=":
+                        try {
+                            model.doOperation();
+                        } catch (ArithmeticException ex){
+                            JOptionPane.showMessageDialog(view, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                        }
+                        break;
+                    default:
+                        if(model.testOperation()){
+                            try {
+                                model.doOperation();
+                            } catch (ArithmeticException ex){
+                                JOptionPane.showMessageDialog(view, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                        model.pushOperation(key);
                         number = "0";
                         break;
                 }
             }
 
-            view.setDisplay(number);
+            view.setDisplay(model.getValue());
         }
     }
 }
