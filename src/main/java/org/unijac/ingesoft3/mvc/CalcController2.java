@@ -31,7 +31,7 @@ public class CalcController2 {
 
             if(!command){
                 if((number + key).matches("[0-9]*|[0-9]+.[0-9]*")){
-                    if(number.equals("0"))
+                    if(number.equals("0") && StringUtils.isNumeric(key))
                         number = "";
                     number += key;
                     model.setValue(number);
@@ -45,6 +45,7 @@ public class CalcController2 {
                     case "=":
                         try {
                             model.doOperation();
+                            number = "0";
                         } catch (ArithmeticException ex){
                             JOptionPane.showMessageDialog(view, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         }
@@ -55,6 +56,7 @@ public class CalcController2 {
                                 model.doOperation();
                             } catch (ArithmeticException ex){
                                 JOptionPane.showMessageDialog(view, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                                model.reset();
                             }
                         }
                         model.pushOperation(key);
@@ -62,7 +64,6 @@ public class CalcController2 {
                         break;
                 }
             }
-
             view.setDisplay(model.getValue());
         }
     }
