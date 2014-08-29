@@ -1,4 +1,4 @@
-package org.unijac.ingesoft3.mvc;
+package edu.uniajc.ingesoft3.mvc;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

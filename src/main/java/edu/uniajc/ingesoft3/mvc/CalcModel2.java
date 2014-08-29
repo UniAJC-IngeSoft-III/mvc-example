@@ -1,4 +1,4 @@
-package org.unijac.ingesoft3.mvc;
+package edu.uniajc.ingesoft3.mvc;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

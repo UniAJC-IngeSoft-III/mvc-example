@@ -1,4 +1,4 @@
-package org.unijac.ingesoft3.mvc;
+package edu.uniajc.ingesoft3.mvc;
 
 import org.apache.commons.lang3.StringUtils;
 

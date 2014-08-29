@@ -1,8 +1,8 @@
-package org.unijac.ingesoft3;
+package edu.uniajc.ingesoft3;
 
-import org.unijac.ingesoft3.mvc.CalcController2;
-import org.unijac.ingesoft3.mvc.CalcModel2;
-import org.unijac.ingesoft3.mvc.CalcView2;
+import edu.uniajc.ingesoft3.mvc.CalcController2;
+import edu.uniajc.ingesoft3.mvc.CalcModel2;
+import edu.uniajc.ingesoft3.mvc.CalcView2;
 
 /**
  * Created by alexhd on 8/26/14.
