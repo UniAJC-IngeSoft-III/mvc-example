@@ -27,6 +27,8 @@ and based on this as a good starting point, I will continue the development of t
 
 #Clone, Build and test
 
+    git clone git@github.com:UniJAC-IngeSoft-III/mvc-example.git
+    cd mvc-example
     mvn clean compile assembly:single
     java -jar target/Ejercicio-MVC-1.0-jar-with-dependencies.jar
     
