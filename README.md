@@ -24,3 +24,10 @@ and based on this as a good starting point, I will continue the development of t
     haciéndolos parecer como propios.
                                            Anonimo
 
+
+#Build and test
+
+    mvn clean compile assembly:single
+    java -jar target/Ejercicio-MVC-1.0-jar-with-dependencies.jar
+    
+  
